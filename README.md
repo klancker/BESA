@@ -5,4 +5,11 @@ Download the following files into the same directory in order to run the BESA ex
 
 BESA was developed using R version 4.0.4 (2021-02-15).
 
+PLEASE NOTE: Stan is currently having compatibility issues with the current rstan CRAN version and R version. If you have trouble compiling the Stan model with rstan, please use the following (and check whether all dependencies are installed correctly): 
+
+remove.packages(c("StanHeaders", "rstan"))
+install.packages("StanHeaders", repos = c(https://mc-stan.org/r-packages/, getOption("repos")))
+install.packages("rstan", repos = c(https://mc-stan.org/r-packages/, getOption("repos")))
+
+
 This content is licensed under the terms of the MIT license. 
